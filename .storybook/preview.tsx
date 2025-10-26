@@ -1,25 +1,25 @@
-import type { Preview } from '@storybook/react-vite';
-import { ChakraProvider } from '@chakra-ui/react';
-import { system } from '../src/theme';
+import type { Preview } from '@storybook/react';
+import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { withThemeByClassName } from '@storybook/addon-themes';
 
 const preview: Preview = {
   tags: ['autodocs'],
   decorators: [
     (Story) => (
-      <ChakraProvider value={system}>
-        <Story />
+      <ChakraProvider value={defaultSystem}>
+        {Story()}
       </ChakraProvider>
-    )
+    ),
+    withThemeByClassName({
+      themes: { light: '', dark: 'dark' },
+      defaultTheme: 'light'
+    })
   ],
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i
-
-
-      }
+    docs: {
+      codePanel: true  // Key: Enable the Code panel here
     }
+    // Other parameters...
   }
 };
 
