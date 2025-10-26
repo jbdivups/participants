@@ -3,7 +3,7 @@ import { Button as ChakraButton, type ButtonProps as ChakraButtonProps } from '@
 
 interface ButtonProps extends ChakraButtonProps {
   label?: string;
-  colorPalette: 'red' | 'blue' | 'green';
+  colorPalette?: 'red' | 'blue' | 'green';
 }
 
 export const Button: React.FC<ButtonProps> = ({ label, colorPalette }) => (
