@@ -1,5 +1,5 @@
 import { Box, Container } from '@chakra-ui/react';
-import { Button } from './components/ui/Button/Button.tsx';
+import { Button } from './components/Button/Button.tsx';
 
 function App() {
 

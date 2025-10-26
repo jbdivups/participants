@@ -12,13 +12,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Click Me'
+    label: 'Click me I\'m a button'
   }
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Click Me',
-    colorPalette: 'blue'
+    label: 'Click me I\'m a button',
+    colorPalette: 'green'
+  },
+  argTypes: {
+    colorPalette: {
+      control: { type: 'select' }
+    }
   }
 };

@@ -3,12 +3,13 @@ import { Button as ChakraButton, type ButtonProps as ChakraButtonProps } from '@
 
 interface ButtonProps extends ChakraButtonProps {
   label?: string;
-  colorPalette?: 'red' | 'blue' | 'green';
   variant?: 'solid' | 'outline' | 'ghost';
+  disabled?: boolean;
+  loading?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, colorPalette, variant }) => (
-  <ChakraButton colorPalette={colorPalette} variant={variant}>
+export const Button: React.FC<ButtonProps> = ({ label, colorPalette, variant, disabled, loading }) => (
+  <ChakraButton disabled={disabled} colorPalette={colorPalette} variant={variant} loading={loading}>
     {label}
   </ChakraButton>
 );
