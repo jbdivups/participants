@@ -6,12 +6,6 @@ const config: StorybookConfig = {
     '@storybook/addon-docs'
   ],
   framework: '@storybook/react-vite',
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      propFilter: (prop) => prop.parent ? !/node_modules\/(?!@chakra-ui)/.test(prop.parent.fileName) : true
-    }
-  },
   refs: {
     '@chakra-ui/react': { disable: true }
   }
