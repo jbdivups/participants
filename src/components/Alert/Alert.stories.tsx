@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from './Button';
+import { Alert } from './Alert';
 
 const meta = {
-  component: Button
-} satisfies Meta<typeof Button>;
+  component: Alert
+} satisfies Meta<typeof Alert>;
 
 export default meta;
 
@@ -12,6 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Click me I\'m a button'
+    title: 'Hello',
+    description: 'This is an alert message.'
   }
 };

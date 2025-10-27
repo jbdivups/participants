@@ -1,13 +1,14 @@
 import { Box, Container } from '@chakra-ui/react';
-import { Button } from './components/Button/Button.tsx';
+import { Button } from './components/Button';
+import { Alert } from './components/Alert';
 
 function App() {
-
 
   return (
     <Container>
       <Box p={8}>
-        <Button />
+        <Button label={'Hello'} />
+        <Alert title={'Hello'} />
       </Box>
     </Container>
   );
